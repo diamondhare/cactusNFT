@@ -2,7 +2,6 @@ name: Hardhat Tests
 
 on:
   push:
-    branches: [ main, develop ]
   pull_request:
 
 jobs:
