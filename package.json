@@ -1,13 +1,23 @@
 {
+  "scripts": {
+    "node:local": "hardhat node",
+    "deploy:local:cactus-game": "hardhat run scripts/deploy/local/deploy-cactus-game-local.ts",
+    "deploy:node:cactus-game": "hardhat run scripts/deploy/local/deploy-cactus-game-hardhat-node.ts",
+    "configure:local:cactus-game": "hardhat run scripts/deploy/local/configure-cactus-game-local.ts",
+    "genetics:breed": "tsx scripts/genetics/breed-cactus-offchain.ts",
+    "sign:cactus-action": "tsx scripts/signatures/sign-cactus-action.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck:scripts": "tsc -p tsconfig.scripts.json --noEmit"
+  },
   "dependencies": {
     "@openzeppelin/contracts": "^5.6.1",
-    "hardhat": "^3.3.0"
+    "hardhat-chai-matchers": "^0.0.1"
   },
   "type": "module",
   "devDependencies": {
-    "@nomicfoundation/hardhat-ethers": "^4.0.7",
+    "@nomicfoundation/hardhat-ethers": "^4.0.9",
     "@nomicfoundation/hardhat-ignition": "^3.1.1",
-    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.3",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.4",
     "@types/chai": "^5.2.3",
     "@types/chai-as-promised": "^8.0.2",
     "@types/mocha": "^10.0.10",
@@ -15,7 +25,9 @@
     "chai": "^6.2.2",
     "ethers": "^6.16.0",
     "forge-std": "github:foundry-rs/forge-std#v1.9.4",
+    "hardhat": "^3.4.2",
     "mocha": "^11.7.5",
+    "ts-node": "^10.9.2",
     "typescript": "~5.8.0"
   }
 }

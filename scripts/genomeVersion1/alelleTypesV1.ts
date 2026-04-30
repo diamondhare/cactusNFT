@@ -1,4 +1,4 @@
-import { TRAITS } from "./cactusTraitsV1.js";
+import { TRAITS } from "./cactusTraitsV1";
 
 export type TraitKey = keyof typeof TRAITS;
 

@@ -1,6 +1,6 @@
 import { keccak256 } from "ethers";
-import { GenomeInput } from "./alelleTypesV1.js";
-import { encodeTrait, TRAIT_ORDER } from "./encodeAlleleV1.js";
+import { GenomeInput } from "./alelleTypesV1";
+import { encodeTrait, TRAIT_ORDER } from "./encodeAlleleV1";
 
 export function packGenome(input: GenomeInput) {
   let genome = 0n;
@@ -31,12 +31,12 @@ export function packGenome(input: GenomeInput) {
   // === hex ===
   const hex = "0x" + genome.toString(16).padStart(64, "0");
 
-  // === hash (optional) ===
-  const hash = keccak256(hex);
+  // // === hash (optional) ===
+  // const hash = keccak256(hex);
 
   return {
     genomeBigInt: genome,
     genomeHex: hex,
-    genomeHash: hash
+    // genomeHash: hash
   };
 }

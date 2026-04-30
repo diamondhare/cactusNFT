@@ -1,6 +1,6 @@
 import { keccak256 } from "ethers";
-import { TRAITS } from "./cactusTraitsV1.js";
-import { AlleleInput, TraitKey } from "./alelleTypesV1.js";
+import { TRAITS } from "./cactusTraitsV1";
+import { AlleleInput, TraitKey } from "./alelleTypesV1";
 
 export const TRAIT_ORDER: TraitKey[] = [
   "bodyShape",

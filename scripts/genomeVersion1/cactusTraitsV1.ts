@@ -35,7 +35,7 @@ export const TRAITS = {
     YellowVariegated: 6,
     WhiteVariegated: 7,
     RedStressTint: 8,
-    AlmostBlack: 9,
+    Grey: 9,
   },
 
   spineLength: {

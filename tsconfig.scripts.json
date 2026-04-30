@@ -8,18 +8,11 @@
     "skipLibCheck": true,
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "outDir": "dist",
-    "types": [
-      "node",
-      "mocha",
-      "chai"
-    ]
+    "types": ["node"],
+    "noEmit": true
   },
   "include": [
     "types/**/*.d.ts",
-    "hardhat.config.ts",
-    "test/**/*.ts",
-    "ignition/**/*.ts",
     "scripts/**/*.ts"
   ]
 }

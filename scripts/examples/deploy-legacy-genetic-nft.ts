@@ -1,4 +1,5 @@
 import { network } from "hardhat";
+import type { GeneticNFT } from "../../types/ethers-contracts/ERC721NFT.sol/GeneticNFT.js";
 
 const { ethers } = await network.connect();
 
@@ -6,7 +7,11 @@ async function main() {
   console.log("Deploying GeneticNFT contract...");
 
   const GeneticNFT = await ethers.getContractFactory("GeneticNFT");
-  const geneticNFT = await GeneticNFT.deploy("GeneticNFT", "GNFT", "https://example.com/");
+  const geneticNFT = (await GeneticNFT.deploy(
+    "GeneticNFT",
+    "GNFT",
+    "https://example.com/"
+  )) as GeneticNFT;
 
   await geneticNFT.waitForDeployment();
 

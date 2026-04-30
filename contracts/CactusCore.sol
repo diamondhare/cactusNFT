@@ -100,6 +100,7 @@ contract CactusCore is ERC721, AccessControl {
     error GerminationNotReady(uint64 readyAt);
     error NotSeedOwner();
     error ZeroAddressRecipient();
+    error MotherCactusAlreadyMinted();
 
     constructor(
         string memory name,
@@ -119,6 +120,7 @@ contract CactusCore is ERC721, AccessControl {
         if (to == address(0)) revert ZeroAddressRecipient();
 
         tokenId = _tokenIdCounter;
+        if (tokenId != 0) revert MotherCactusAlreadyMinted();
         _tokenIdCounter++;
 
         cactusData[tokenId] = CactusData({
